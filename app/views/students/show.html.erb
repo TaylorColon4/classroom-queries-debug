@@ -3,7 +3,6 @@
     <h1>
       Student #<%= @the_student.id %> details
     </h1>
-
     <div class="row mb-3">
       <div class="col">
         <a href="/students">
@@ -11,7 +10,6 @@
         </a>
       </div>
     </div>
-
     <dl>
       <dt>
         First name
@@ -19,21 +17,18 @@
       <dd>
         <%= @the_student.first_name %>
       </dd>
-
       <dt>
         Last name
       </dt>
       <dd>
         <%= @the_student.last_name %>
       </dd>
-
       <dt>
         Email
       </dt>
       <dd>
         <%= @the_student.email %>
       </dd>
-
       <dt>
         Number of courses
       </dt>
@@ -43,10 +38,7 @@
     </dl>
   </div>
 </div>
-
-
 <hr>
-
 <h3>Course Load</h3>
 <ul>
   <% enrollments = Enrollment.where({:student_id => @the_student.id }) %>
